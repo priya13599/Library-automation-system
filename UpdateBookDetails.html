@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Update Book's Details</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="login.css">
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #99004d;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #660029;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+
+
+
+</head>
+<body style="background-color:#66ffc2;">
+<div class="logo">
+<img src="ABESEC_logo.png" alt="ABES EC" float="left" height="130" width="110">
+<div class ="title">
+<u><font style="margin-left:-150px ; margin-top:60px; position:absolute; color:#99004d; " size="7px"><b><u>LIBRARY AUTOMATION SYSTEM</u></b></font></u>
+
+</div>
+
+</div>
+
+<div class="navbar">
+  <a href="home.html">Home</a>
+  <a href="Registration.html">Registration</a>
+  <div class="dropdown">
+    <button class="dropbtn">Login As 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+     <a href="LoginAdmin.html">Admin</a>
+      <a href="LoginLibrarian.html">Librarian</a>
+    
+   </div>
+  </div> 
+  
+<a href="Contact.jsp">ContactUs</a>
+<a href="home.html" style="margin-left:1100px">Logout</a>
+</div>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="InsertBookDetails.html">Insert Book's Details </a>
+  <a href="UpdateBookDetails.html">Update Book's Details</a>
+  <a href="DeleteBookDetails.html">Delete Book's Details </a>
+  <a href="DisplayBookDetails.html">Display Book's Details</a>
+  <a href="SearchBookDetails.html">Search Book's Details </a>
+  <a href="DisplayLibrarianDetails.html">Display Librarian's Details</a>
+ <a href="AdminChangePassword.html">Change Password</a>
+ <a href="AdminForgetPassword.html">Forget Password?</a>
+</div>
+
+<div id="main">
+  <h2 style ="color:#99004d;">Admin Functions</h2>
+  
+  <span style="font-size:30px;cursor:pointer;color:#660029" onclick="openNav()">&#9776;</span>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+     
+     
+     <form class="modal-content" action ="BookController">
+    <div class="container">
+      <h1 style="color:#99004d;">Book's Details Updation Form</h1>
+    
+      <hr>
+      <label for="name" style="color:#99004d;"><b>Book's Name</b></label>
+      <input type="text" placeholder="Enter Name" name="name" required>
+      
+     <label for="number" style="color:#99004d;"><b>Book No.</b></label>
+      <input type="text" placeholder="Enter Book No." name="number" required>
+      
+      <label for="name" style="color:#99004d;"><b>Author's Name</b></label>
+      <input type="text" placeholder="Enter Author Name" name="authorname" required>
+      
+       <label for="name" style="color:#99004d;"><b>Publisher's Name</b></label>
+      <input type="text" placeholder="Enter Publisher Name" name="pubname" required>
+
+      <label for="name" style="color:#99004d;"><b>Quantity</b></label>
+      <input type="text" placeholder="Enter Quantity" name="quantity" required>
+      
+       <label for="name" style="color:#99004d;"><b>Edition</b></label>
+      <input type="text" placeholder="Enter Edition" name="edition" required>
+      
+       <label for="name" style="color:#99004d;"><b>Price</b></label>
+      <input type="text" placeholder="Enter Price" name="price" required>
+
+   
+      
+      <div class="clearfix">
+      
+      <input type="submit" class="signupbtn" value="MODIFY" name ="c1"/>
+      </div>
+    </div>
+  
+   
+   
+  </form>
+     
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Loginadmin</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="login.css">
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/F83F6E00-42FF-4741-B1BD-B18C2DE9CA81/main.js" charset="UTF-8"></script>
+
+</head>
+<body style="background-color:#66ffc2;">
+<div class="logo">
+<img src="ABESEC_logo.png" alt="ABES EC" float="left" height="130" width="110">
+<div class ="title">
+<u><font style="margin-left:-150px ; margin-top:60px; position:absolute; color:#99004d; " size="7px"><b><u>LIBRARY AUTOMATION SYSTEM</u></b></font></u>
+
+</div>
+
+</div>
+
+<div class="navbar">
+  <a href="home.html">Home</a>
+  <a href="Registration.html">Registration</a>
+  <div class="dropdown">
+    <button class="dropbtn">Login As 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+     <a href="LoginAdmin.html">Admin</a>
+      <a href="LoginLibrarian.html">Librarian</a>
+    
+   </div>
+  </div> 
+  
+<a href="Contact.jsp">ContactUs</a>
+</div>
+
+
+<form class="modal-content" action ="Servletregistration">
+    <div class="container">
+     <h1 style="color:#99004d;">Register</h1>
+    <p style="color:#99004d;">Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="email" style="color:#99004d;"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+ 
+ 
+    <label for="uname" style="color:#99004d;"><b>UserName</b></label>
+    <input type="text" placeholder="Enter name" name="uname" required>
+ 
+    <labelfor="name" style="color:#99004d;"><b>LoginAs</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Admin<input type="radio" name="m1" value ="admin" checked>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+      Librarian<input type="radio" name="m1" value ="librarian" >
+      <br>
+      <br>
+    <label for="psw" style="color:#99004d;"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat" style="color:#99004d;"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="pswrepeat" onkeyup='check()' required>
+    <hr>
+    <p style="color:#99004d;">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+    <input type="submit" class="signupbtn" value="REGISTER" name ="c1"/>
+  
+  </div>
+  
+  <div class="container signin">
+    <p style="color:#99004d;">Already have an account? <a href="login.html">Sign in</a>.</p>
+  </div>
+</form>
+
+   
+  
+     
+</body>
+</html>
